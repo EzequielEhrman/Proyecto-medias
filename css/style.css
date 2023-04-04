@@ -1,0 +1,238 @@
+/*GENERAL*/
+ul{
+    list-style-type: none;
+}
+a{text-decoration: none;
+font-size:20px;
+font-style: italic;
+color:brown;
+padding: 20px;
+}
+.contacto{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: brown;
+}
+.titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+
+}
+.contenedor{
+    background-image: url(../img/Instalaciones.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: left;
+    font-size: 30px;
+    font-weight: bold;
+    height: 200px;
+}
+
+.profesionales{
+    font-style: italic;
+   display: inline-block;
+   height: 10px;
+   width: 10px;
+}
+.cuadrado{
+    background-color: gray;
+    padding: 10px;
+    margin: 10px;
+}
+.titulodr{   
+ font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    position: relative;
+    top:15px;
+    left: 2px;
+}
+.tituloh3{
+    text-align:center;
+    font-size: 30px;
+
+}
+#subth4{
+    text-align: center;
+}
+#Trecetas{
+    
+    text-align: center;
+    font-size: 30px;
+}
+.selecdrs{
+    position: relative;
+    top: -22px;
+    left: 137px;
+}
+.encabezado{
+    text-align: center;
+    font-size: 30px;
+    
+}
+.logoscontactoc{
+    position: relative;
+    top: -68px;
+    left: 56px;
+}
+.logow{
+    position: relative;
+    top: 18px;
+    left: 175px;
+    color: brown;
+    font-size: 30px;
+}
+.logogmail{
+    position: relative;
+    top: 19px;
+    left: -19px;
+    
+}
+.logosmails{
+    position: relative;
+    top: -73px;
+    left: 45px;
+    color: brown;
+    font-size: 30px;
+}
+.direcciónM{
+    position: relative;
+    top: -67px;
+    left: 40px;
+    color: brown;
+    font-size: 30px;
+    
+}
+.logodirec{
+    position: relative;
+    top: 10px;
+    left: 10px;
+
+}
+.formularioc{
+    display: inline-block;
+    padding: 100px;
+    font-size: 25px;
+}
+
+
+/*FLEX*/
+header, ul, footer{ display: flex;}
+.jusconbet{
+    justify-content: space-between;
+}
+/*BOX M*/
+.mb10{
+    margin-bottom: 10px;
+}
+.mt0{
+    margin-top: 0%;
+}
+.p20{
+    padding: 20px;
+}
+.titulo{
+    text-align: center;
+} 
+
+/*MEDIAS*/
+/*DESKTOP*/
+@media (min-width:1024px){
+    .gridIndex{
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+}
+.gridmainIndex{
+    display: grid;
+    grid-template-areas:
+    "imgprincipal imgprincipal imgprincipal"
+    "titulo titulo titulo"
+    "tituloh3 mapa formulario";
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: auto auto auto;
+}
+
+
+.imgprincipal{grid-area: imgprincipal;}
+.titulo{grid-area: titulo;}
+.tituloh3{grid-area: tituloh3;}
+.mapa{grid-area: mapa;}
+.formulario{grid-area: formulario;}
+header{grid-area: header;}
+
+main{ grid-area:  main;}
+footer{grid-area: footer;}
+
+
+.gridmainProfesionales{
+    display: grid;
+    grid-template-areas: 
+    "contenedor contenedor"
+    "cuadrado1 cuadrado2"
+    "cuadrado3 cuadrado4";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    
+   
+
+}
+.contenedor{grid-area: contenedor;}
+.cuadrado1{grid-area: cuadrado1;}
+.cuadrado2{grid-area: cuadrado2;}
+.cuadrado3{grid-area: cuadrado3;}
+.cuadrado4{grid-area: cuadrado4;}
+
+.GridMainRecetas{
+display: grid;
+grid-template-areas:
+"foto foto"
+"tituloRec tituloRec"
+"selecdrs fordrs";
+grid-template-columns: 50% 50%;
+grid-template-rows: auto auto auto;
+}
+
+.foto{grid-area: foto;}
+.tituloRec{grid-area: tituloRec;}
+.selecdrs{grid-area: selecdrs;}
+.fordrs{grid-area: fordrs;}
+/*Contacto*/
+.GridMainContacto{
+    display: grid;
+    grid-template-areas: 
+    
+    "encabezado encabezado"
+    "logow logogmail"
+    "formularioc mapac";
+    grid-template-columns:repeat(2,50%);
+    grid-template-rows: auto auto;
+}
+
+.encabezado{grid-area: encabezado;}
+.logow{grid-area: logow;}
+.logogmail{grid-area: logogmail;}
+.formularioc{grid-area: formularioc;}
+.mapac{grid-area: mapac;}
+
+
+}
+
+/*MOBILE*/
+@media (max-width:768px){
+    header,main,footer{display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+    ul{display: flex; padding: 0;}
+    a{color: brown;
+    font-size: 20px; padding: 5px;margin: 3px;}
+.GridMainContacto{display: grid;
+    grid-template-columns: 100%;
+    grid-template-columns: repeat(5) ;
+
+}    
+}
