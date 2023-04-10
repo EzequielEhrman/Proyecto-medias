@@ -134,6 +134,7 @@ header, ul, footer{ display: flex;}
     text-align: center;
 } 
 
+
 /*MEDIAS*/
 /*DESKTOP*/
 @media (min-width:1024px){
@@ -234,5 +235,10 @@ grid-template-rows: auto auto auto;
     grid-template-columns: 100%;
     grid-template-columns: repeat(5) ;
 
-}    
+}
+.gridIndex{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: repeat (10);
+}
 }
